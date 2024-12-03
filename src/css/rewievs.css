@@ -1,0 +1,96 @@
+.kuper{
+    display: flex;
+    padding-left: 68px;
+    margin-bottom: 233px;
+}
+
+.kuper-all{
+    display: flex;
+    flex-direction: column;
+    padding-right: 119px;
+}
+
+.rewievs-img{
+    border-radius: 35px;
+}
+
+.kuper-klas{
+    margin-top: 1px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    padding-right: 68px;
+}
+
+.author{
+    width: 134px;
+    height: 134px;
+    background: #fa9;
+    border-radius: 71px;
+}
+
+.review-title{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 45px;
+    color: #0f1f1c;
+}
+
+.review-title-small{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 33px;
+    color: #0f1f1c;
+}
+
+.city-autor{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 25px;
+    color: #0f1f1c;
+    opacity: 0.5;
+}
+
+.review-text{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    color: #0f1f1c;
+    opacity: 0.5;
+    width: 491px;
+    height: 66px;
+    padding-bottom: 30px;
+}
+
+.review-author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.info-author{
+    padding-top: 11px;
+    gap: 10px;
+    padding-left: 34px;
+}
+
+.review{
+    padding-top: 35px;
+    height: 134px;
+}
+
+.stars {
+    display: flex;
+    direction: row;
+    cursor: pointer;
+}
+
+.stars span {
+    font-size: 2rem;
+    color: lightgray;
+    transition: color 0.3s;
+}
+
+.stars span.active {
+    color: gold;
+}

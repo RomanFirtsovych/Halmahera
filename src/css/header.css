@@ -1,20 +1,59 @@
 .header {
-  padding: 20px 0;
+  color: white;
+  text-align: center;
+  /* padding: 50px 0; */
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+  padding: 20px 0 0 0;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #1F5E37, #000);
+  overflow: hidden;
+  position: relative;
 }
+
+.header {
+  color: white;
+  text-align: center;
+  position: relative;
+  /* Контекст для позиціювання дочірніх елементів */
+  border-radius: 20px;
+  background:
+    url('../img/look.png') no-repeat center center,
+    /* Фото поверх */
+    linear-gradient(to right, #1F5E37, #000);
+  /* Градієнт під фото */
+  background-size: cover, cover;
+  /* Обидва шари покривають контейнер */
+  overflow: hidden;
+  /* Приховує все, що виходить за межі */
+  z-index: 0;
+  /* Зберігає фон на базовому рівні */
+  /* padding: 50px 0; */
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 68px;
 }
 .nav-logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
 }
 .nav-list {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 40px;
+  gap: 80px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
 }
 .nav-link {
   position: relative;
@@ -23,9 +62,24 @@
   letter-spacing: 0.02em;
   transition: 200ms ease-in;
 }
+
+.nav-link-home{
+  position: relative;
+}
+
+.nav-link-home::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
 .nav-link:hover,
 .nav-link:focus {
-  color: #747bff;
+  color: #ff7c4e;;
 }
 .nav-link::after {
   content: '';
@@ -41,4 +95,130 @@
 }
 .nav-link.active::after {
   background: #747bff;
+}
+
+.header-sign{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+
+.actions{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header-login{
+  border-radius: 100px;
+  width: 128px;
+  height: 49px;
+  background-color: #FF7B4E;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+}
+
+.explore-subtitle{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  width: 227px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-title{
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 55px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.explore-description{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+  opacity: 0.5;
+  padding-bottom: 68px;
+}
+
+.explore-button{
+  border-radius: 27px;
+  width: 263px;
+  height: 91px;
+  background:#FF7B4E;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 25px;
+  color: #fefefe;
+  margin-bottom: 201px;
+}
+
+.explore-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Контекст для позиціювання дочірніх елементів */
+  gap: 20px;/* Простір між текстом та зображенням */
+  }
+
+  .explore {
+  position: relative;
+  /* Задаємо тексту більш високий z-index */
+  z-index: 2;
+  /* Текст розташовується поверх зображення */
+}
+.explore-title,
+.explore-subtitle,
+.explore-description,
+.explore-button {
+  position: relative;
+  /* Забезпечує правильне відображення тексту */
+}
+
+.explore-section {
+  position: relative;
+  max-width: 100%;
+  /* Не дозволяє виходити за межі */
+  overflow: hidden;
+  /* Приховує зайве */
+}
+
+.icon{
+  position: absolute;
+}
+
+.bottom-rightt {
+  bottom: 550px;
+  left: 300px;
+}
+
+.top-leftt {
+  top: 300px;
+  right: 100px;
+}
+
+.top-rightt{
+  bottom: 300px;
+  left: 100px;
+}
+
+***
+.bottom-leftt {
+  top: 550px;
+  right: 300px;
 }
